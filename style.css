@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Lilita+One&display=swap');
+
+
+:root {
+    --bg_hoverKeyboard: #D0833C;
+    --bg_colum: #d0843caf;
+    --fontTitle: 'Lilita One', sans-serif;
+    --fontText: 'Commissioner', sans-serif;
+    --colorKey: #442C16;
+    --colorText: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-image: url('img/fondo-ahorcado.png');
+    background-size:cover;
+    background-position:center; 
+    overflow: hidden;
+    height: 100vh;
+
+}
+
+#h1_palabra{
+    font-family: var(--fontTitle);
+    text-align: center;
+}
+#h1_palabra h1{
+    color: var(--bg_hoverKeyboard);
+    text-align: center;
+}
+
+#teclado {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 0px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--bg_colum);
+}
+
+
+.letra{
+    font-family: var(--fontTitle);
+    font-size: 30px;
+    padding: 10px;
+    color: var(--colorText);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--colorKey);
+    transition: background-color 0.3s ease;
+}
+
+.letra:hover {
+    background-color: var(--bg_hoverKeyboard);
+    color: var(--colorText);
+}
+
+#palabra{
+    font-size: 60px;
+    color: var(--colorText);
+}
+#menu{
+    font-family: var(--fontText);
+    font-size: 25px;
+    width: 40%;
+    height: 50%;
+    border: 1px solid #ccc;
+    background-color: var(--bg_colum);
+    color: var(--colorText);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin: 0% 0% 3% 5%;
+}
+
+#div_dibujo{
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    border: 1px solid #ccc;
+    background-image: url(img/fondo_ah.png);
+    overflow: hidden;
+    background-size:cover;
+    background-repeat: no-repeat;
+    
+
+}
+
+#ahorcado-dibujo {
+    width: 300px;
+    height: 300px;
+}
+
+#ahorcado-dibujo img {
+    max-width: 100%;
+}
+
+#ahorcado-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; 
+    justify-content: center;
+    color: var(--colorText);
+    margin-top: 5%;
+  }
+
+#inicio-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; 
+    justify-content: center;
+    color: var(--colorText);
+    
+}
+
+.botones{
+    font-size: 20px;
+    border: none;
+    width: 150px;
+    height: 40px;
+    background-color: var(--bg_colum);
+    margin-top: 10px;
+    border-radius: 5px;
+    animation: entrada 1s ease-out;
+    font-family: var(--fontText);
+    margin-right: 5px;
+    color: var(--colorHead);
+}
+
+.botones:hover {
+    background-color: var(--bg_hoverKeyboard);
+    font-size: 22px;
+    color: var(--colorText);
+}
+
+
+
+@media (max-width: 991px) {
+    #palabra{
+        font-size: 40px;
+    }
+    #menu{
+        position: relative;
+        font-family: var(--fontText);
+        font-size: 20px;
+        left: 2%;
+        width: 95%;
+        text-align: center;
+        margin: 0% 0% 2% 0%;
+    }
+
+    #div_dibujo{
+    margin: 0% 0% 2% 0%;
+    width: 95%;
+    position: relative;
+    left: 2%;
+    
+    }
+
+    #ahorcado-dibujo {
+        width: 150px;
+        height: 150px;
+    }
+
+    
+    
+    .letra{      
+        font-size: 20px;
+        padding: 5px;
+    }
+
+
+
+    #teclado {
+        grid-template-columns: repeat(10, 1fr);
+    }
+
+   
+}

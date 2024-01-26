@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css"></link>
+    <!-- FONT-AWESOME -->
+    <script src="https://kit.fontawesome.com/f1d3ec1e99.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+<section>
+  
+</section>
+    <div class="container" id="inicio-container">
+        <img src="img/TITULOU.png" alt="">
+        <button onclick="iniciarJuego()" class="botones">Jugars</button>
+        <button onclick="mostrarInstrucciones()" class="botones">Instrucciones</button>
+        <div id="instrucciones" style="display: none;">
+            <p>instruccioneeees</p>
+        </div>
+    </div>
+
+    <div class="container" id="ahorcado-container" style="display:none">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6" id="h1_palabra">  
+                <h1>AHORCADO</h1>
+                <p id="palabra"></p>
+            </div>
+                <div class="col-sm-12 col-lg-6" id="menu">    
+                        <p id="intentos" ><i class="fa-solid fa-heart fa-beat" style="color: #D0833C;"> </i> <span id="numIntentos"></span></p>
+                        <p id="categoria" ></p>
+                        <p id="pista" ></p>
+                </div>
+            </div>
+     
+        
+        <div class="row">
+             <div class="col-sm-12 col-lg-6" id="div_dibujo">
+         <div id="ahorcado-dibujo"></div>
+        </div>
+            <div class="col-sm-12 col-lg-6" id="">
+              <div id="teclado">
+            <!--    <button class="letra"></button>  <button class="letra" onclick="seleccionarLetra('b')">B</button>
+                <button class="letra" onclick="seleccionarLetra('c')">C</button> <button class="letra" onclick="seleccionarLetra('d')">D</button>
+                <button class="letra" onclick="seleccionarLetra('e')">E</button> <button class="letra" onclick="seleccionarLetra('f')">F</button>
+                <button class="letra" onclick="seleccionarLetra('g')">G</button> <button class="letra" onclick="seleccionarLetra('h')">H</button>
+                <button class="letra" onclick="seleccionarLetra('i')">I</button> <button class="letra" onclick="seleccionarLetra('j')">J</button>
+                <button class="letra" onclick="seleccionarLetra('k')">K</button> <button class="letra" onclick="seleccionarLetra('l')">L</button>
+                <button class="letra" onclick="seleccionarLetra('m')">M</button> <button class="letra" onclick="seleccionarLetra('n')">N</button>
+                <button class="letra" onclick="seleccionarLetra('ñ')">Ñ</button> <button class="letra" onclick="seleccionarLetra('o')">O</button>
+                <button class="letra" onclick="seleccionarLetra('p')">P</button> <button class="letra" onclick="seleccionarLetra('q')">Q</button>
+                <button class="letra" onclick="seleccionarLetra('r')">R</button> <button class="letra" onclick="seleccionarLetra('s')">S</button>
+                <button class="letra" onclick="seleccionarLetra('t')">T</button> <button class="letra" onclick="seleccionarLetra('u')">U</button>
+                <button class="letra" onclick="seleccionarLetra('v')">V</button> <button class="letra" onclick="seleccionarLetra('w')">W</button>
+                <button class="letra" onclick="seleccionarLetra('x')">X</button> <button class="letra" onclick="seleccionarLetra('y')">Y</button>
+                <button class="letra" onclick="seleccionarLetra('z')">Z</button> -->
+
+              </div>
+            </div>
+       
+       </div>
+    </div>
+
+    <div class="modal fade" id="nombreUsuarioModal" tabindex="-1" data-bs-backdrop="static" role="dialog" aria-labelledby="nombreUsuarioModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="nombreUsuarioModalLabel">Ingresa tu nombre</h5>
+            </div>
+            <div class="modal-body">
+              <!-- Contenido del modal -->
+              <input type="text" id="nombreUsuarioInput" class="form-control" placeholder="Tu nombre">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-light" onclick="guardarNombreUsuario()" style="background-color: #D0833C;">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+       
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script src="js/ahorcado.js"></script>
+<script src="js/function.js"></script>
+</body>
+</html>
