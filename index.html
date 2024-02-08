@@ -19,20 +19,21 @@
     <title>Document</title>
 </head>
 <body>
-<section>
-  
-</section>
     <div class="container" id="inicio-container">
-        <img src="img/TITULOU.png" alt="">
+        <img src="img/TITULOU.png" alt="" id="titulo">
         <button onclick="iniciarJuego()" class="botones">Jugar</button>
         <button onclick="mostrarInstrucciones()" class="botones">Instrucciones</button>
         <div id="instrucciones" style="display: none;">
             <p>Instrucciones</p>
         </div>
     </div>
-
+    <div id="nombre-usuario" style="display: none;">  
+      <p id="nombre" ></p>
+  </div>
     <div class="container" id="ahorcado-container" style="display:none">
+ 
         <div class="row">
+          
             <div class="col-sm-12 col-lg-6" id="h1_palabra">  
                 <h1>AHORCADO</h1>
                 <p id="palabra"></p>

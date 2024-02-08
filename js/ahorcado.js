@@ -76,16 +76,23 @@ function iniciarJuego() {
     if (!nombreUsuario) {
         solicitarNombreUsuario();
     }
+   
 
-    // Oculta la sección de inicio
+  const nombre = document.getElementById("nombre");
+  nombre.innerHTML = `<i class='fa-solid fa-user'></i>  ${nombreUsuario}`;
+  
     document.getElementById("inicio-container").style.display = "none";
      
     generarTeclado();
-    // Muestra la sección del juego
+
     document.getElementById("ahorcado-container").style.display = "block";
+
+    document.getElementById("nombre-usuario").style.display = "block";
+
 
     // Inicializa la interfaz del juego
     actualizarInterfaz();
+    guardarEnLocalStorage();
 }
 function mostrarInstrucciones() {
     // Muestra la sección de instrucciones

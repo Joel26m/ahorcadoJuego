@@ -1,4 +1,4 @@
-let nombreUsuario = null;
+let nombreUsuario;
 function solicitarNombreUsuario() {
     // Muestra el modal
     $('#nombreUsuarioModal').modal('show');
@@ -64,6 +64,7 @@ function guardarEnLocalStorage() {
 function recuperarDeLocalStorage() {
     palabraSecreta = localStorage.getItem('palabraSecreta') || palabraSecreta;
     palabraEnProceso = localStorage.getItem('palabraEnProceso') || palabraEnProceso;
+    intentosRestantes = localStorage.getItem('intentosRestantes') || intentosRestantes;
     //letrasUtilizadas = JSON.parse(localStorage.getItem('letrasUtilizadas')) || [];
     nombreUsuario = localStorage.getItem('nombreUsuario') || nombreUsuario;
     palabraSeleccionada.pista = localStorage.getItem('pista') || palabraSeleccionada.pista;
@@ -75,6 +76,7 @@ function limpiarLocalStorage() {
     localStorage.removeItem('letrasUtilizadas');
     localStorage.removeItem('pista');
     localStorage.removeItem('categoria');
+    
   
    
 }

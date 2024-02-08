@@ -124,13 +124,27 @@ body {
     
 }
 
+
+#nombre-usuario{
+    border: 2px solid #ccc;
+    display: flex;
+    position: absolute;
+    top: 10px;
+    margin-left: 30px;
+    font-size: 18px;
+    color: var(--colorText);
+    border-radius: 5px;
+    padding: 15px 15px 0px 15px;
+    background-color: var(--bg_colum);
+}
+
 .botones{
     font-size: 20px;
     border: none;
     width: 150px;
-    height: 40px;
+    height: 45px;
     background-color: var(--bg_colum);
-    margin-top: 10px;
+    margin-top: 15px;
     border-radius: 5px;
     animation: entrada 1s ease-out;
     font-family: var(--fontText);
@@ -186,5 +200,15 @@ body {
         grid-template-columns: repeat(10, 1fr);
     }
 
+    #nombre-usuario{  
+        top: 15px;
+        font-size: 15px;
+        margin-left: 15px;
+    }
+
+    #titulo{
+        width: 400px;
+        height: 70px;
+    }
    
 }
