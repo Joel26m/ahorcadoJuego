@@ -54,22 +54,15 @@ const palabraSeleccionada = palabrasCategoria[Math.floor(Math.random() * palabra
 
 let palabraSecreta = palabraSeleccionada.nombre;
 
-const pista = document.getElementById("pista");
-pista.innerHTML = `<i class="fas fa-question-circle"></i> ${palabraSeleccionada.pista}`;
-
-const categoria = document.getElementById("categoria");
-categoria.textContent = "Categoria: " + categoriaActual.categoria;
-
 
 // Máscara para la palabra
 //let palabraEnProceso = "_".repeat(palabraSecreta.length);
 //let palabraEnProceso = palabraSecreta.replace(/ /g, '_').replace(/./g, '_ ');
 let palabraEnProceso = palabraSecreta.split('').map(letra => (letra === ' ' ? ' ' : '_')).join('').toLowerCase();
 
-
-// Número de intentos permitidos
 const maxIntentos = 7;
 let intentosRestantes = maxIntentos;
+
 
 function iniciarJuego() {
     recuperarDeLocalStorage();
@@ -77,23 +70,27 @@ function iniciarJuego() {
         solicitarNombreUsuario();
     }
    
+    const pista = document.getElementById("pista");
+    pista.innerHTML = `<i class="fas fa-question-circle"></i> ${palabraSeleccionada.pista}`;
+    
+    const categoria = document.getElementById("categoria");
+    categoria.textContent = "Categoria: " + categoriaActual.categoria;
 
-  const nombre = document.getElementById("nombre");
-  nombre.innerHTML = `<i class='fa-solid fa-user'></i>  ${nombreUsuario}`;
+    const nombre = document.getElementById("nombre");
+    nombre.innerHTML = `<i class='fa-solid fa-user'></i>  ${nombreUsuario}`;
   
     document.getElementById("inicio-container").style.display = "none";
      
     generarTeclado();
 
     document.getElementById("ahorcado-container").style.display = "block";
-
     document.getElementById("nombre-usuario").style.display = "block";
-
 
     // Inicializa la interfaz del juego
     actualizarInterfaz();
     guardarEnLocalStorage();
 }
+
 function mostrarInstrucciones() {
     // Muestra la sección de instrucciones
     document.getElementById("instrucciones").style.display = "block";
@@ -205,6 +202,7 @@ function generarTeclado() {
         botonLetra.addEventListener("click", function() {
             botonLetra.style.display="none";
             adivinarLetra(letra);
+           
         });
         tecladoContainer.appendChild(botonLetra);
     }

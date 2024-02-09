@@ -22,10 +22,29 @@
     <div class="container" id="inicio-container">
         <img src="img/TITULOU.png" alt="" id="titulo">
         <button onclick="iniciarJuego()" class="botones">Jugar</button>
-        <button onclick="mostrarInstrucciones()" class="botones">Instrucciones</button>
-        <div id="instrucciones" style="display: none;">
-            <p>Instrucciones</p>
-        </div>
+        <button id="btnInstrucciones" class="botones">Instrucciones</button>
+        <div id="modalInstrucciones" class="modal">
+          <div class="modal-content" id="contenido">
+              <span class="close">&times;</span>
+              <div id="div_titulo2">
+                <img src="img/TITULOU.png" alt="" id="titulo2">
+              </div> <br>
+              
+                <h3>OBJETIVO<br></h3>
+                  <p> Adivinar la palabra oculta antes de que se completen todas las partes del ahorcado.</p> 
+
+                <h3>CÓMO JUGAR </h3>
+                  <p>- Se mostrará una palabra oculta representada por guiones bajos. <br>
+                    - Haz clic en las letras del teclado para adivinar las letras de la palabra.<br>
+                    -  Si adivinas correctamente una letra, se mostrará en su posición<br>
+                    - Si te equivocas, perderás un intento y se dibujará una parte del ahorcado.<br>
+
+              <h3>PISTAS</h3>   
+                <p>Cada palabra tiene una pista asociada que te ayudará a adivinarla.</p>   
+              <h3>CATEGORÍAS</h3> 
+                <p> Cada categoría tiene un conjunto único de palabras para adivinar.</p>  
+          </div>
+      </div>
     </div>
     <div id="nombre-usuario" style="display: none;">  
       <p id="nombre" ></p>

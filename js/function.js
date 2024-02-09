@@ -1,4 +1,4 @@
-let nombreUsuario;
+let nombreUsuario = '';
 function solicitarNombreUsuario() {
     // Muestra el modal
     $('#nombreUsuarioModal').modal('show');
@@ -24,6 +24,30 @@ function guardarNombreUsuario() {
 
     // Cierra el modal
     $('#nombreUsuarioModal').modal('hide');
+    
+    
+}
+
+// Obtener elementos del DOM
+const btnInstrucciones = document.getElementById('btnInstrucciones');
+const modalInstrucciones = document.getElementById('modalInstrucciones');
+const closeModal = document.getElementsByClassName('close')[0];
+
+// Mostrar el modal al hacer clic en el botón
+btnInstrucciones.onclick = function() {
+    modalInstrucciones.style.display = 'block';
+}
+
+// Ocultar el modal al hacer clic en la "x"
+closeModal.onclick = function() {
+    modalInstrucciones.style.display = 'none';
+}
+
+// Ocultar el modal al hacer clic fuera de él
+window.onclick = function(event) {
+    if (event.target == modalInstrucciones) {
+        modalInstrucciones.style.display = 'none';
+    }
 }
 
 function mostrarVentanaFinal(acertado) {
