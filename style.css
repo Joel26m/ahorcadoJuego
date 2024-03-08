@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Lilita+One&display=swap');
 
-
 :root {
     --bg_hoverKeyboard: #D0833C;
     --bg_colum: #d0843caf;
@@ -90,8 +89,6 @@ body {
     overflow: hidden;
     background-size:cover;
     background-repeat: no-repeat;
-    
-
 }
 
 #ahorcado-dibujo {
@@ -104,7 +101,6 @@ body {
 }
 
 #ahorcado-container{
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,6 +156,67 @@ body {
 
 
 
+
+/* MODAL INSTRUCCIONES */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 20, 0, 0.6);
+    color: var(--colorText);
+}
+
+#contenido {
+    background-color: var(--colorKey);
+    margin: 3% auto;
+    padding: 15px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+#div_titulo2{
+    display: flex;
+    justify-content: center;
+
+}
+#titulo2{
+    position: relative;
+    width: 400px;
+    height: 70px;
+    max-width: 100%;
+}
+
+#contenido h3{
+color: var(--bg_hoverKeyboard);
+text-align: center;
+    
+}
+
+#contenido p{
+    
+    text-align: center;
+        
+    }
+.close {
+    color: var(--colorText);
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover{
+    color: var(--bg_hoverKeyboard);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* RESPONSIVE*/
+
 @media (max-width: 991px) {
     #palabra{
         font-size: 40px;
@@ -194,8 +251,6 @@ body {
         padding: 5px;
     }
 
-
-
     #teclado {
         grid-template-columns: repeat(10, 1fr);
     }
@@ -210,68 +265,11 @@ body {
         width: 400px;
         height: 70px;
     }
+
+    #titulo2{
+        width: 350px;
+        height: 65px;
+}
+
    
-}
-
-
-
-/* MODAL INSTRUCCIONES */
-.modal {
-    display: none; /* Ocultar el modal por defecto */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(5, 20, 0, 0.6);
-    color: var(--colorText);
-}
-
-#contenido {
-    background-color: var(--colorKey);
-    margin: 3% auto;
-    padding: 15px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    
-}
-
-#contenido h3{
-color: var(--bg_hoverKeyboard);
-text-align: center;
-    
-}
-
-#contenido p{
-    
-    text-align: center;
-        
-    }
-.close {
-    color: var(--colorText);
-    float: right;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.close:hover{
-    color: var(--bg_hoverKeyboard);
-    text-decoration: none;
-    cursor: pointer;
-}
-#div_titulo2{
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 70px;
-    display: flex;
-    
-}
-#titulo2{
-    position: relative;
-    left: 80px;
-    justify-content: center;
-    max-width: 100%;
 }

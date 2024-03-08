@@ -5,15 +5,13 @@ function solicitarNombreUsuario() {
 }
 
 function guardarNombreUsuario() {
-    // Obtiene el nombre desde el input del modal
     nombreUsuario = document.getElementById('nombreUsuarioInput').value.trim();
 
-    // Si el usuario no ingresa un nombre, asigna uno predeterminado
     if (!nombreUsuario) {
         nombreUsuario = "Anónimo";
     }
 
-    // Muestra un saludo con el nombre del usuario
+    // Mostrar saludo 
     Swal.fire({
         position: "center",
         icon: "success",
@@ -22,13 +20,12 @@ function guardarNombreUsuario() {
         timer: 1500
       });
 
-    // Cierra el modal
+    // Cerrar el modal
     $('#nombreUsuarioModal').modal('hide');
     
     
 }
 
-// Obtener elementos del DOM
 const btnInstrucciones = document.getElementById('btnInstrucciones');
 const modalInstrucciones = document.getElementById('modalInstrucciones');
 const closeModal = document.getElementsByClassName('close')[0];
@@ -52,14 +49,14 @@ window.onclick = function(event) {
 
 function mostrarVentanaFinal(acertado) {
     
-    // Obtén la imagen e información del animal adivinado
+    // ObtENER la imagen e información del animal adivinado
     let imagenAnimal = palabraSeleccionada.imagen;
     let informacionAnimal = palabraSeleccionada.informacion;
 
     // Configuración de ventana
     const configuracionSweetAlert = {
         imageUrl: imagenAnimal,
-        imageWidth: 200, // Ajusta el ancho de la imagen según sea necesario
+        imageWidth: 200, 
         title: acertado ? '¡Felicidades!' : '¡Has perdido!',
         text: acertado ? `Has adivinado la palabra: ${palabraSecreta}` : `La palabra correcta era: ${palabraSecreta}`,
         html: `<p>${informacionAnimal}</p>`,
@@ -67,9 +64,8 @@ function mostrarVentanaFinal(acertado) {
         confirmButtonColor: '#D0833C'
     };
 
-    // Muestra la ventana 
     Swal.fire(configuracionSweetAlert).then((result) => {
-        // Puedes agregar lógica adicional aquí si es necesario
+
         if (result.isConfirmed) {
             reiniciarJuego();
         }
